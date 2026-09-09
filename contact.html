@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Terminal — Digital Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Access Request</h1>
+        <p>Control panel and connection logs.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Main</a>
+        <a href="about.html">About the Object</a>
+        <a href="contact.html" class="active">Communication Terminal</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Connection Logs (Table)</h2>
+            <table>
+                <caption>Network terminal activity log</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Terminal ID</th>
+                        <th scope="col">IP Address</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Node-01</th>
+                        <td>192.168.1.10</td>
+                        <td colspan="2">Active / Level 3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Node-02</th>
+                        <td>192.168.1.15</td>
+                        <td>Waiting</td>
+                        <td>Level 1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Node-03</th>
+                        <td>192.168.1.42</td>
+                        <td>Synchronizing</td>
+                        <td>Level 2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Node-04</th>
+                        <td>192.168.1.88</td>
+                        <td>Blocked</td>
+                        <td>Level 0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total active nodes: 4</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Access Level Request Form</h2>
+            <form>
+                <fieldset>
+                    <legend>Authorization Parameters</legend>
+
+                    <label for="username">Operator Name:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter callsign">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="name@domain.com">
+
+                    <label for="access-date">Request Date:</label>
+                    <input type="date" id="access-date" name="access_date">
+
+                    <label for="system-color">Interface Color Tag:</label>
+                    <input type="color" id="system-color" name="system_color" value="#1a1a1a">
+
+                    <p>Select access class:</p>
+                    <label>
+                        <input type="radio" name="access_level" value="standard" checked> Standard
+                    </label>
+                    <label>
+                        <input type="radio" name="access_level" value="root"> Administrator
+                    </label>
+
+                    <br><br>
+                    <label>
+                        <input type="checkbox" name="rules" required> I confirm protocol security
+                    </label>
+
+                    <br><br>
+                    <label for="comment">Request Comment:</label>
+                    <textarea id="comment" name="comment" rows="3" maxlength="150" placeholder="Maximum 150 characters"></textarea>
+
+                    <br><br>
+                    <button type="submit">Send Request</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Digital Archive</p>
+    </footer>
+</body>
+</html>
